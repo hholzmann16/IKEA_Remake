@@ -1,0 +1,274 @@
+.container{
+  float: left;
+  margin: 1.364em 0 0 2.9em;
+  width: 420px;
+  height: 371;
+  padding: .7em 0 0 1.56em;
+}
+
+.layout{
+  display: block;
+  position: relative;
+  float: right;
+  right: 50px;
+}
+
+.title{
+  font-family: Verdana,sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -1px;
+  display: block;
+  font-weight: bold;
+  text-align: left;
+}
+
+.price{
+  font-family: Verdana,sans-serif;
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.article{
+  color: #000;
+  font-size: 11px;
+  line-height: 2;
+  font-family: verdana;
+}
+
+.review{
+  letter-spacing: normal;
+  color: #3399FD;
+  font-size: 11px;
+  line-height: 35px;
+}
+
+.review1{
+  letter-spacing: normal;
+  color: black;
+  font-size: 11px;
+  line-height: 35px;
+}
+
+.reviewLayout{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.description{
+  line-height: 18px;
+  color: #333;
+  padding-bottom: 15px;
+  font-size: 13px;
+}
+
+.quantity{
+  height: 30px;
+  width: 56px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: normal;
+  float: right;
+  border: 1px solid #999;
+  margin: 5px 0 10px 0;
+  border-radius: 2px;
+}
+
+.quantity1{
+  color: #767676;
+    font-size: 13px;
+    line-height: 46px;
+}
+.button1{
+  display: block;
+  border-radius: 5px;
+  background: #a2bfe6;
+  padding: 0px; 
+  width: 420px;
+  height: 46px; 
+  font-size:12px;
+  line-height:1px;
+}
+
+.button2{
+  display: block;
+  border-radius: 5px;
+  background:#cdcdcd;
+  padding: 0px; 
+  width: 420px;
+  height: 46px;
+  font-size:12px;
+  line-height:1px;
+}
+
+.button3{
+  display: block;
+  border-radius: 5px;
+  background:#ffc9ae;
+  padding: 17px; 
+  width: 420px;
+  height: 46px;
+  font-size:12px;
+  line-height:1px;
+}
+
+.star{
+  font-size: 23px;
+}
+
+.location{
+  width: 150%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left{
+  float: left;
+  margin: 0 0 5px 0;
+  font-size: 1.1462em;
+  font-weight: bold;
+  color: #333;
+  display: block;
+}
+
+
+
+.right{
+  box-sizing: border-box;
+    width: 80%;
+    float: right;
+    margin-left: 8px;
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+}
+
+.noAvail{
+  font-size: 11px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+}
+
+.availability{
+  font-size: 11px;
+    margin: 5px 0;
+}
+
+.box{
+  display:block;
+}
+
+.stock1{
+  margin: 10px 0 0 0;
+  clear: both;
+  width: inherit;
+  float: none;
+  margin-bottom: 8px;
+}
+.stock{
+  font-size: 11px;
+    text-align: left;
+    font-style: italic;
+    color: #333;
+}
+
+.store{
+  color: #3399fd;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bottom{
+  font-style: italic;
+  font-size: 11px;
+  text-align: left;
+  padding: .5px 0 2px 0;
+  color: #767676;
+}
+
+.assembly{
+  width: 200px;
+  float: left;
+  line-height: 40px;
+  border-bottom: solid;
+  border-bottom-color: #f2f2f2;
+  border-bottom-width: 1px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.assembly1{
+  background-image: url(/ms/img/ads/vitality/service_offer/assembly_big.jpg);
+  padding-left: 32px;
+  background-size: 30px 20px;
+  background-repeat: no-repeat;
+  background-position: 0% 64%;
+  line-height: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.DropdownControl {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #333;
+  cursor: default;
+  outline: none;
+  padding: 8px 52px 8px 10px;
+  transition: all 200ms ease;
+}
+.dropDown{
+  height: 33px;
+  margin-top: 5px;
+  padding: 0;
+  border: 1px solid #999;
+  line-height: 33px;
+}
+.DropdownMenu {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: 5px;
+  max-height: 200px;
+  line-height: 33px;
+  overflow-y: auto;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+}
+
+.store1{
+  color: #767676;
+  vertical-align: middle;
+  margin: 0;
+  font-weight: normal;
+  font-size: 13px;
+  padding: 0;
+  line-height: 17px;
+}
+
+.store2{
+  text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 165px;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 35px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 0;
+    line-height: 17px;
+}
+

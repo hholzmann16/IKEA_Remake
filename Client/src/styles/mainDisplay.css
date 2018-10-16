@@ -1,0 +1,21 @@
+.layout{
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.layout2{
+  display: block;
+  float: right;
+  width:510px;
+  padding: 0;
+}
+
+.carousel{
+  display: flex;
+  float: left;
+  flex-flow: row;
+  width: 100px;
+  padding: 0;
+}

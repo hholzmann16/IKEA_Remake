@@ -1,0 +1,10 @@
+.layout{
+  display: inline-block;
+    background-color: transparent;
+    left: inherit;
+    top: inherit;
+    width: auto;
+    height: 97%;
+    margin: 0 5px 9px 0;
+    z-index: 10;
+}

@@ -1,0 +1,138 @@
+var faker = require("faker");
+const db = require("../database/index.js");
+
+var insert = function() {
+  for (var i = 0; i <= 10000000; i++) {
+    db.displayData.create({
+      type: faker.name.lastName(),
+      productLine: faker.lorem.word(),
+      title: faker.internet.domainWord(),
+      articleNumber: `${Math.floor(Math.random() * 1000000)}`,
+      price: `${Math.floor(Math.random() * 1000)}.${Math.floor(
+        Math.random() * 100
+      )}`,
+      starRating: Math.floor(Math.random() * 6),
+      reviewCount: Math.floor(Math.random() * 10000),
+      description: "Lorem ipsum sentence fake",
+      availability: Math.random() >= 0.5,
+      imageUrl: "http://dummyimage.com/211x112.jpg/dddddd/000000",
+      additionalUrl: [
+        { Url: "http://dummyimage.com/168x138.jpg/5fa2dd/ffffff" },
+        { Url: "http://dummyimage.com/124x140.jpg/ff4444/ffffff" },
+        { Url: "http://dummyimage.com/105x173.jpg/cc0000/ffffff" }
+      ]
+    });
+
+    console.log(i);
+  }
+};
+
+Promise.all(insert())
+  .then(() => {
+    console.log("All items inserted into DB");
+    process.exit();
+  })
+  .catch(e => console.error("Failed to seed DB: ", e));
+
+
+______________________________
+
+var faker = require("faker");
+const db = require("../database/index.js");
+
+const docs = [];
+
+for (var i = 0; i < 10000000; i++) {
+  console.log(i, "num");
+  docs.push({
+    type: faker.name.lastName(),
+    productLine: faker.lorem.word(),
+    title: faker.internet.domainWord(),
+    articleNumber: `${Math.floor(Math.random() * 1000000)}`,
+    price: `${Math.floor(Math.random() * 1000)}.${Math.floor(
+      Math.random() * 100
+    )}`,
+    starRating: Math.floor(Math.random() * 6),
+    reviewCount: Math.floor(Math.random() * 10000),
+    description: "Lorem ipsum sentence fake",
+    availability: Math.random() >= 0.5,
+    imageUrl: "http://dummyimage.com/211x112.jpg/dddddd/000000",
+    additionalUrl: [
+      { Url: "http://dummyimage.com/168x138.jpg/5fa2dd/ffffff" },
+      { Url: "http://dummyimage.com/124x140.jpg/ff4444/ffffff" },
+      { Url: "http://dummyimage.com/105x173.jpg/cc0000/ffffff" }
+    ]
+  });
+}
+
+db.displayData.collection.insert(docs, {}, err => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log("did it");
+  process.exit();
+});
+
+
+___________________________________
+
+var faker = require("faker");
+var db = require("../database/index.js");
+const mongoose = require("mongoose");
+
+let total = 0;
+const limit = 100000;
+const doit = () => {
+  const docs = [];
+  for (var i = 0; i < limit; i++) {
+    // console.log(i + total, "num");
+    docs.push({
+      type: faker.name.lastName(),
+      productLine: faker.lorem.word(),
+      title: faker.internet.domainWord(),
+      articleNumber: `${Math.floor(Math.random() * 1000000)}`,
+      price: `${Math.floor(Math.random() * 1000)}.${Math.floor(
+        Math.random() * 100
+      )}`,
+      starRating: Math.floor(Math.random() * 6),
+      reviewCount: Math.floor(Math.random() * 10000),
+      description: "Lorem ipsum sentence fake",
+      availability: Math.random() >= 0.5,
+      imageUrl: "http://dummyimage.com/211x112.jpg/dddddd/000000",
+      additionalUrl: [
+        { Url: "http://dummyimage.com/168x138.jpg/5fa2dd/ffffff" },
+        { Url: "http://dummyimage.com/124x140.jpg/ff4444/ffffff" },
+        { Url: "http://dummyimage.com/105x173.jpg/cc0000/ffffff" }
+      ]
+    });
+  }
+
+  db.displayData.insertMany(docs, err => {
+    if (err) {
+      console.error(err);
+      process.exit();
+    }
+    total += limit;
+    console.log(`[${(new Date())}] Current total: ${total}`);
+    if (total < limit * 100) {
+      delete docs;
+      // delete mongoose.models["displayData"];
+      // delete mongoose.connection.models["displayData"];
+      // delete mongoose.connection.collections["displayDatas"];
+      // delete mongoose.modelSchemas["displayData"];
+      doit();
+    } else {
+      console.log("fuckin did it");
+      process.exit();
+    }
+  });
+};
+
+console.log(`[${(new Date())}] Current total: ${total}`);
+doit();
+
+
+___________________________________
+
+
