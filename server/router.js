@@ -1,6 +1,8 @@
 var router = require("express").Router();
 var controller = require("./controller.js");
-var cache = require("express-redis-cache")();
+var cache = require("express-redis-cache")({
+  host: "redis"
+});
 
 router
   .route("/item/:id")

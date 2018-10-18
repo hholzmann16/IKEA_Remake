@@ -2,7 +2,7 @@ var faker = require("faker");
 const fs = require("fs");
 
 let total = 0;
-const limit = 101;
+const limit = 10000000;
 const Files1 = fs.createWriteStream("./sql_data2.csv");
 
 for (var i = 1; i < limit; i++) {

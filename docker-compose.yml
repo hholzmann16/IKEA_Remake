@@ -1,0 +1,17 @@
+version: "3"
+services:
+  ikea:
+    image: "hholzmann16/ikea"
+    container_name: "ikea_container"
+    build:
+      context: .
+    ports:
+      - 7000:7000
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    links:
+      - redis
+  redis:
+    image: redis:latest

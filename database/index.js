@@ -1,11 +1,17 @@
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("IkeaDB", "root", "", {
-  host: "localhost",
-  dialect: "mysql",
-  define: {
-    timestamps: false
+const sequelize = new Sequelize(
+  process.env["DB_NAME"],
+  process.env["DB_USER"],
+  process.env["DB_PASS"],
+  {
+    host: process.env["DB_HOST"],
+    port: process.env["DB_PORT"],
+    dialect: "mysql",
+    define: {
+      timestamps: false
+    }
   }
-});
+);
 
 sequelize
   .authenticate()
