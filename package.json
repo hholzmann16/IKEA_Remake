@@ -28,6 +28,7 @@
     "morgan": "^1.7.0",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.1",
+    "newrelic": "^4.9.0",
     "nuka-carousel": "^4.3.9",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
@@ -35,6 +36,7 @@
     "react-image-zoom": "^0.7.0",
     "react-modal": "^3.5.1",
     "react-star-rating-component": "^1.4.1",
+    "relic": "^0.2.0",
     "request": "^2.88.0",
     "style-loader": "^0.23.0",
     "styled-components": "^3.4.5"
